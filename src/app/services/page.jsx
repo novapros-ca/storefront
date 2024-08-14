@@ -8,7 +8,7 @@ import TeamStyle1 from '@/components/team/TeamStyle1';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business - Services"
+    title: "NovaPros - Services"
 }
 
 const ServicesPage = () => {

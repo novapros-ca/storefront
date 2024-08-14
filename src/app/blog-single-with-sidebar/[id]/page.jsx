@@ -4,7 +4,7 @@ import blogData from '@/assets/jsonData/blog/BlogData.json';
 import React from 'react';
 
 export const metadata = {
-    title: "Consua - Consulting Business - Blog Single With Sidebar"
+    title: "NovaPros - Blog Single With Sidebar"
 }
 
 const BlogSingleWithSidebar = ({ params }) => {

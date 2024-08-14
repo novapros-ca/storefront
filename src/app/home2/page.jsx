@@ -13,7 +13,7 @@ import FunFactStyle1 from '@/components/fun/FunFactStyle1';
 import BlogStyle2 from '@/components/blog/BlogStyle2';
 
 export const metadata = {
-    title: "Consua - Consulting Business React-NextJS Template"
+    title: "NovaPros React-NextJS Template"
 }
 
 const Home2 = () => {
