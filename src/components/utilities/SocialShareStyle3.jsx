@@ -5,17 +5,17 @@ const SocialShareStyle3 = () => {
     return (
         <>
             <li className="facebook">
-                <Link href="https://www.facebook.com/" target="_blank">
+                <Link href="https://www.facebook.com/profile.php?id=61564415243700" target="_blank">
                     <i className="fab fa-facebook-f"></i>
                 </Link>
             </li>
             <li className="twitter">
-                <Link href="https://twitter.com/" target="_blank">
-                    <i className="fab fa-twitter"></i>
+                <Link href="https://x.com/NovaProsCa" target="_blank">
+                    <i className="fab fa-x-twitter"></i>
                 </Link>
             </li>
             <li className="linkedin">
-                <Link href="https://www.linkedin.com/" target="_blank">
+                <Link href="https://www.linkedin.com/company/novapros/" target="_blank">
                     <i className="fab fa-linkedin-in"></i>
                 </Link>
             </li>

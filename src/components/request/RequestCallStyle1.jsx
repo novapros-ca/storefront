@@ -9,8 +9,8 @@ const RequestCallStyle1 = () => {
                 <div className="container">
                     <div className="row align-center">
                         <div className="col-lg-6">
-                            <h2 className="title">Looking for a First-Class <br /> Business Consultant?</h2>
-                            <Link className="btn circle btn-light mt-30 mt-md-15 mt-xs-10 btn-md radius animation" href="/contact-us">Request a Call back</Link>
+                            <h2 className="title">À la recherche d'un consultant d'affaires de premier ordre ?</h2>
+                            <Link className="btn circle btn-light mt-30 mt-md-15 mt-xs-10 btn-md radius animation" href="/contact">Prendre contact!</Link>
                         </div>
                         <div className="col-lg-6 text-end">
                             <AchievementCounter1 />

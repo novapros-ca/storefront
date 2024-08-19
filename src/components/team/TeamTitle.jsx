@@ -7,8 +7,8 @@ const TeamTitle = () => {
                 <div className="row">
                     <div className="col-lg-8 offset-lg-2">
                         <div className="site-heading text-center">
-                            <h4 className="sub-heading">Team Members</h4>
-                            <h2 className="title">Meet our experts</h2>
+                            <h4 className="sub-heading">Notre Équipe</h4>
+                            <h2 className="title">Rencontrez nos experts</h2>
                             <div className="devider"></div>
                         </div>
                     </div>

@@ -13,7 +13,10 @@ const BannerStyle1 = () => {
                     <Swiper
                         modules={[Keyboard, Autoplay, Pagination, EffectFade]}
                         direction={"horizontal"}
-                        autoplay={false}
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        }}
                         loop={true}
                         effect={"fade"}
                         fadeEffect={{
@@ -30,7 +33,7 @@ const BannerStyle1 = () => {
                         <div className="swiper-wrapper">
                             {Banner1Data.map(banner =>
                                 <SwiperSlide key={banner.id} className='banner-style-one'>
-                                    <SingleBanner1 banner={banner} />
+                                    <SingleBanner1 subTitleClassName={banner.subTitleClassName} banner={banner} invert={banner?.invert} />
                                 </SwiperSlide>
                             )}
                         </div>

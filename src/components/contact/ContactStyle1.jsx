@@ -8,9 +8,6 @@ const ContactStyle1 = () => {
     return (
         <>
             <div className="contact-style-one-area overflow-hidden secondary default-padding">
-                <div className="contact-shape">
-                    <Image src={shape37} alt="Image Not Found" />
-                </div>
                 <div className="container">
                     <div className="row align-center">
                         <div className="contact-stye-one col-lg-5 mb-md-50 mb-xs-20">

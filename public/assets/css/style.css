@@ -87,7 +87,7 @@ Sidebar heading:  20px 'Outfit', sans-serif
 	--font-default: 'Outfit', sans-serif;
 	--font-heading: 'Outfit', sans-serif;
 	--font-secondary: 'Manrope', sans-serif;
-	--fontawesome: "Font Awesome 5 Pro";
+	--fontawesome: "Font Awesome 6 Free";
 	--black: #000000;
 	--dark: #1D2027;
 	--dark-secondary: #022b6d;
@@ -2742,6 +2742,10 @@ p {
 	font-weight: 400;
 }
 
+.top-bar-area li .fas {
+	color: var(--white);
+}
+
 .top-bar-area .social li {
 	display: inline-block;
 	margin-right: 30px;
@@ -2909,6 +2913,7 @@ p {
 	nav.navbar.navbar-style-one.validnavs.navbar-fixed.no-background .navbar-header img {
 		position: relative;
 		top: -35px;
+		max-width: 230px;
 	}
 }
 
@@ -2944,7 +2949,7 @@ p {
 
 .breadcrumb-area .breadcrumb>li+li::before {
 	content: "\f105";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	font-weight: 600;
 	padding: 0 5px;
 	color: var(--white);
@@ -2966,7 +2971,7 @@ p {
 
 .breadcrumb-area .breadcrumb li::after {
 	content: "\f105";
-	font-family: "Font Awesome 5 Pro";
+	font-family: var(--fontawesome);
 	font-weight: 500;
 	right: -5px;
 	position: absolute;
@@ -3013,6 +3018,11 @@ p {
 /* ==============================================================
     # Topbar Styles
 =================================================================== */
+
+.logo {
+	width: 200px;
+	height: 30px;
+}
 
 .top-style-one .logo img {
 	height: 60px;
@@ -3402,6 +3412,11 @@ p {
 	transform: translateY(0);
 	-webkit-transition-delay: 1200ms;
 	transition-delay: 1200ms;
+	font-weight: normal;
+}
+
+.banner-area .swiper-slide.swiper-slide-active h4.emphasis {
+	font-size: 1.3rem;
 }
 
 .banner-area .swiper-slide.swiper-slide-active h2 {
@@ -3717,7 +3732,7 @@ p {
 }
 
 .banner-area.navigation-custom-large .swiper-button-prev::after {
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	content: "\f104";
 	font-weight: 100;
 	font-size: 30px;
@@ -3741,7 +3756,7 @@ p {
 }
 
 .banner-area.navigation-custom-large .swiper-button-next::after {
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	content: "\f105";
 	font-weight: 100;
 	font-size: 30px;
@@ -4271,7 +4286,7 @@ p {
 	min-width: 85px;
 	position: relative;
 	top: 30px;
-	color: var(--color-primary);
+	color: var(--white);
 }
 
 .about-card .fun-fact .counter {
@@ -4699,7 +4714,7 @@ p {
 .faq-style-one button.accordion-button::after {
 	background: transparent;
 	content: "\f107";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	font-weight: 100;
 	font-size: 25px;
 	position: absolute;
@@ -5024,7 +5039,7 @@ p {
 	left: 0;
 	top: 1px;
 	content: "\f00c";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	color: var(--color-primary);
 	font-weight: 500;
 	font-size: 14px;
@@ -5306,7 +5321,7 @@ p {
 	right: 0;
 	top: 10px;
 	content: "\f067";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	font-weight: 100;
 	transition: all 0.35s ease-in-out;
 	opacity: 0;
@@ -5644,6 +5659,10 @@ p {
 	background-repeat: no-repeat;
 	z-index: -1;
 	background-position: right bottom;
+}
+
+.partner-style-one-area img {
+	height: 130px;
 }
 
 .partner-style-two-area {
@@ -6375,7 +6394,7 @@ p {
 	content: "";
 	height: 100%;
 	width: 100%;
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	text-align: center;
 	color: var(--white);
 }
@@ -6826,7 +6845,7 @@ ul.check-list li::after {
 	left: 0;
 	top: 0;
 	content: "\f058";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	font-size: 20px;
 	color: var(--color-primary);
 	font-weight: 600;
@@ -7035,7 +7054,7 @@ form.seo-form input:-moz-placeholder {
 	left: 0;
 	top: 0;
 	content: "\f058";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	color: var(--color-secondary);
 }
 
@@ -7891,7 +7910,7 @@ form.seo-form input:-moz-placeholder {
 	left: 0;
 	top: 50%;
 	content: "\f058";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	transform: translateY(-50%);
 	margin-top: 1px;
 	font-weight: 600;
@@ -7980,7 +7999,7 @@ form.seo-form input:-moz-placeholder {
 	content: "";
 	height: 100%;
 	width: 100%;
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	text-align: center;
 	color: var(--white);
 }
@@ -8262,7 +8281,7 @@ form.seo-form input:-moz-placeholder {
 	left: 0;
 	top: 50%;
 	content: "\f058";
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	transform: translateY(-50%);
 	font-weight: 600;
 	color: var(--color-secondary);
@@ -8671,6 +8690,10 @@ form.seo-form input:-moz-placeholder {
 	margin-top: 50px;
 }
 
+.submit-container {
+	text-align: center;
+}
+
 .contact-form-style-one {
 	box-shadow: 0px 15px 60px -10px rgb(109 117 143 / 33%);
 	padding: 60px 80px;
@@ -8847,7 +8870,7 @@ footer .widget-title {
 }
 
 footer .logo img {
-	height: 60px;
+	height: 30px;
 }
 
 footer .logo {
@@ -9905,7 +9928,7 @@ ul.list-regular li::after {
 	width: 23px;
 	line-height: 23px;
 	background: var(--dark);
-	font-family: "Font Awesome 5 Pro";
+	font-family: "Font Awesome 6 Free";
 	color: var(--white);
 	text-align: center;
 	border-radius: 50%;
@@ -12369,7 +12392,7 @@ ul.list-regular li::after {
 }
 
 /* Custom Scroll To Top  */
-.to-top-progress {
+.to-top-progress {;
 	z-index: 999999;
 	bottom: 50px !important;
 }
@@ -12387,8 +12410,8 @@ ul.list-regular li::after {
 }
 
 .to-top-progress i {
+	font-family: var(--fontawesome);
 	color: var(--color-primary);
 	font-size: 22px;
-	position: relative;
-	top: 3px;
 }
+

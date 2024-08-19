@@ -12,7 +12,7 @@ const HeaderLogo = ({ openMenu }) => {
                     <i className="fa fa-bars"></i>
                 </button>
                 <Link className="navbar-brand" href="/">
-                    <Image src={logo} className="logo" alt="Logo" />
+                    <Image width={1000} height={1000} src={logo} className="logo" alt="Logo" />
                 </Link>
             </div>
         </>

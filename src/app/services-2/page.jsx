@@ -1,6 +1,6 @@
 import LayoutStyle7 from '@/components/Layouts/LayoutStyle7';
 import AboutStyle2 from '@/components/about/AboutStyle2';
-import PartnerStyle1 from '@/components/partner/PartnerStyle1';
+import CertificationStyle from '@/components/certifications/CertificationStyle';
 import ProcessStyle1 from '@/components/process/ProcessStyle1';
 import RequestCallStyle1 from '@/components/request/RequestCallStyle1';
 import ServicesStyle2 from '@/components/services/ServicesStyle2';
@@ -19,7 +19,7 @@ const Service2Page = () => {
                 <AboutStyle2 />
                 <ServicesStyle2 />
                 <ProcessStyle1 />
-                <PartnerStyle1 sectionClass="default-padding bg-gray" />
+                <CertificationStyle sectionClass="default-padding bg-gray" />
                 <TeamStyle1 teamTitle={true} />
                 <RequestCallStyle1 />
                 <TestimonialStyle1 />

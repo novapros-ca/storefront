@@ -10,10 +10,10 @@ const HeaderTopStyle1 = () => {
                         <div className="col-xl-6 col-lg-8 offset-xl-3 pl-30 pl-md-15 pl-xs-15">
                             <ul className="item-flex">
                                 <li>
-                                    <i className="fas fa-map-marker-alt"></i> 70240 Avenue of the Moon, California
+                                    <a target="_blank" href="https://maps.app.goo.gl/wNyE8GbNx5MMXpm69"><i className="fas fa-map-marker-alt"></i> 213-630 rue Francis-Byrne, Québec, QC</a>
                                 </li>
                                 <li>
-                                    <a href="tel:+4733378901"><i className="fas fa-phone-alt"></i> +4733378901</a>
+                                    <a href="tel:4188007784"><i className="fas fa-phone-alt"></i>(418) 800-7784</a>
                                 </li>
                             </ul>
                         </div>

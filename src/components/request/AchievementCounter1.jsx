@@ -13,22 +13,22 @@ const AchievementCounter1 = () => {
                         </div>
                         <div className="fun-fact">
                             <div className="counter">
-                                <div className="timer"><CountUp end={500} enableScrollSpy /></div>
+                                <div className="timer"><CountUp end={100} enableScrollSpy /></div>
                                 <div className="operator">+</div>
                             </div>
-                            <span className="medium">Business advices given over 30 years</span>
+                            <span className="medium">Conseils donnés depuis 30 ans</span>
                         </div>
                     </li>
                     <li>
                         <div className="icon">
-                            <i className="flaticon-employee"></i>
+                            <i className="flaticon-puzzle-piece"></i>
                         </div>
                         <div className="fun-fact">
                             <div className="counter">
-                                <div className="timer"><CountUp end={30} enableScrollSpy /></div>
+                                <div className="timer"><CountUp end={55} enableScrollSpy /></div>
                                 <div className="operator">+</div>
                             </div>
-                            <span className="medium">Business Excellence awards achieved</span>
+                            <span className="medium">Projets accomplis</span>
                         </div>
                     </li>
                 </ul>

@@ -8,28 +8,25 @@ const ServicesStyle1 = () => {
     return (
         <>
             <div className="services-style-one-area default-padding bg-gray">
-                <div className="triangle-shape">
-                    <Image src={shape10} alt="Shape" />
-                </div>
                 <div className="center-shape" style={{ backgroundImage: `url(/assets/img/shape/5.png)` }}></div>
                 <div className="container">
                     <div className="row align-center">
                         <div className="col-lg-5 mb-md-60">
                             <div className="service-nav-info">
-                                <h4 className="sub-title">What we do</h4>
-                                <h2>Excellent service and support for you</h2>
+                                <h4 className="sub-title">NOS SERVICES</h4>
+                                <h2>Excellents services et soutien</h2>
                                 <div className="nav nav-tabs service-tab-navs" id="nav-tab" role="tablist">
                                     <button className="nav-link active" id="nav-id-1" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
                                         <i className="flaticon-portfolio"></i>
-                                        Consulting services
+                                        Comptabilité
                                     </button>
                                     <button className="nav-link" id="nav-id-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
                                         <i className="flaticon-megaphone"></i>
-                                        Marketing services
+                                        Soutien opérationnel
                                     </button>
                                     <button className="nav-link" id="nav-id-3" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
-                                        <i className="flaticon-save-money"></i>
-                                        Banking services
+                                        <i className="flaticon-interview"></i>
+                                        Ressources humaines
                                     </button>
                                 </div>
                             </div>

@@ -11,7 +11,7 @@ const TeamStyle1 = ({ sectionClass, fullTeam, teamTitle }) => {
                 {teamTitle ? <TeamTitle /> : <></>}
 
                 <div className="container">
-                    <div className="row">
+                    <div className="row d-flex justify-content-center">
                         {fullTeam ?
                             <>
                                 {TeamData.map(team =>

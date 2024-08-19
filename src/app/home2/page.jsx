@@ -3,7 +3,7 @@ import AboutStyle2 from '@/components/about/AboutStyle2';
 import BannerStyle2 from '@/components/banner/BannerStyle2';
 import FaqStyle1 from '@/components/faq/FaqStyle1';
 import FeatureStyle1 from '@/components/feature/FeatureStyle1';
-import PartnerStyle1 from '@/components/partner/PartnerStyle1';
+import CertificationStyle from '@/components/certifications/CertificationStyle';
 import ServicesStyle2 from '@/components/services/ServicesStyle2';
 import TestimonialStyle2 from '@/components/testimonial/TestimonialStyle2';
 import ProjectStyle2 from '@/components/project/ProjectStyle2';
@@ -23,7 +23,7 @@ const Home2 = () => {
                 <BannerStyle2 />
                 <FeatureStyle1 />
                 <ServicesStyle2 />
-                <PartnerStyle1 sectionClass="default-padding" />
+                <CertificationStyle sectionClass="default-padding" />
                 <AboutStyle2 sectionClass="bg-gray" />
                 <FaqStyle1 />
                 <TestimonialStyle2 />

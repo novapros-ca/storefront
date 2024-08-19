@@ -8,8 +8,12 @@ import 'react-circular-progressbar/dist/styles.css';
 import 'react-rangeslider/lib/index.css'
 
 import '@/assets/css/animate.css';
-import '@/assets/css/font-awesome.min.css';
 import '@/assets/css/flaticon-set.css';
+
+import '@/assets/css/fontawesome.min.css';
+import '@/assets/css/brands.min.css';
+import '@/assets/css/solid.min.css';
+import '@/assets/css/v5-font-face.min.css';
 
 import '@/assets/css/nice-select.css';
 import '@/assets/css/validnavs.css';
@@ -18,24 +22,24 @@ import '@/assets/css/unit-test.css';
 import '@/assets/css/style.css';
 
 import Dependency from '@/components/utilities/Dependency';
-import { ToastContainer } from 'react-toastify';
-import { Manrope, Outfit } from "next/font/google";
+import {ToastContainer} from 'react-toastify';
+import {Manrope, Outfit} from "next/font/google";
 
-const manrope = Manrope({ subsets: ["latin"] });
-const outfit = Outfit({ subsets: ["latin"] });
+const manrope = Manrope({subsets: ["latin"]});
+const outfit = Outfit({subsets: ["latin"]});
 
 export const metadata = {
-  title: "NovaPros React - NextJS Template"
+    title: "NovaPros"
 }
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={`${outfit.className} ${manrope.className}`}>
-        <ToastContainer />
-        <Dependency />
+export default function RootLayout({children}) {
+    return (
+        <html lang="en">
+        <body className={`${outfit.className} ${manrope.className}`}>
+        <ToastContainer/>
+        <Dependency/>
         {children}
-      </body>
-    </html>
-  );
+        </body>
+        </html>
+    );
 }

@@ -45,7 +45,7 @@ const ServiceDetailsContent = ({ serviceInfo }) => {
                                         </div>
                                     </div>
                                 </div>
-                                <h3>What we do?</h3>
+                                <h3>Qu'est-ce que nous faisons?</h3>
                                 <p>
                                     Nam libero tempore, cum soluta nobis est elig endi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repelle ndus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.  pleasures have to be repudiated and annoyances accepted.
                                 </p>
@@ -106,7 +106,7 @@ const ServiceDetailsContent = ({ serviceInfo }) => {
                                         </p>
                                         <h2><a href="tel:+(012) 6679545">+(012) 6679545</a></h2>
                                         <h4><a href="mailto:info@digital.com">info@digital.com</a></h4>
-                                        <Link className="btn mt-30 circle btn-sm btn-gradient" href="/contact-us">Contact Us</Link>
+                                        <Link className="btn mt-30 circle btn-sm btn-gradient" href="/contact">Contact</Link>
                                     </div>
                                 </div>
 

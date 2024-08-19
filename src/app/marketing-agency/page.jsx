@@ -4,7 +4,7 @@ import BannerStyle4 from '@/components/banner/BannerStyle4';
 import BlogStyle1 from '@/components/blog/BlogStyle1';
 import FeatureStyle2 from '@/components/feature/FeatureStyle2';
 import MarketingStyle1 from '@/components/marketing/MarketingStyle1';
-import PartnerStyle2 from '@/components/partner/PartnerStyle2';
+import PartnerStyle2 from '@/components/certifications/PartnerStyle2';
 import PriceStyle1 from '@/components/price/PriceStyle1';
 import ProjectStyle3 from '@/components/project/ProjectStyle3';
 import RequestCallStyle2 from '@/components/request/RequestCallStyle2';

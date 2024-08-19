@@ -14,22 +14,22 @@ const About1Card = () => {
                         <div className="fun-fact">
                             <div className="counter">
                                 <div className="timer">
-                                    <CountUp enableScrollSpy end={98} delay={1} duration={2} /></div>
+                                    <CountUp enableScrollSpy end={100} delay={1} duration={2} /></div>
                                 <div className="operator">%</div>
                             </div>
-                            <span className="medium">Consulting Success</span>
+                            <span className="medium">Satisfaction</span>
                         </div>
                     </li>
                     <li>
                         <div className="icon">
-                            <i className="flaticon-global"></i>
+                            <i className="fas fa-people-group"></i>
                         </div>
                         <div className="fun-fact">
                             <div className="counter">
-                                <div className="timer">  <CountUp enableScrollSpy end={120} delay={1} duration={2} /></div>
+                                <div className="timer">  <CountUp enableScrollSpy end={30} delay={1} duration={2} /></div>
                                 <div className="operator">+</div>
                             </div>
-                            <span className="medium">Worldwide Clients</span>
+                            <span className="medium">Années d'expériences</span>
                         </div>
                     </li>
                 </ul>

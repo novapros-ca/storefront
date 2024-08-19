@@ -4,19 +4,30 @@ import { toast } from 'react-toastify';
 
 const ContactForm = () => {
 
-    const handleForm = (event) => {
+    const handleForm = async (event) => {
         event.preventDefault()
-        event.target.reset()
-        toast.success("Thanks For Your Message")
-    }
+        const htmlCollections = event.target.elements;
+        const formData = {
+            name: htmlCollections.name.value,
+            email: htmlCollections.email.value,
+            phone: htmlCollections.phone.value,
+            comments: htmlCollections.comments.value,
+        };
 
+        const t = await fetch("./.netlify/functions/triggerContactEmail", {
+            method: "POST",
+            body: JSON.stringify(formData)
+        });
+
+        toast.success("Merci, nous vous contacterons bientôt.")
+    }
     return (
         <>
-            <form className="contact-form contact-form" onSubmit={handleForm}>
+            <form className="contact-form" onSubmit={handleForm}>
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="form-group">
-                            <input className="form-control" id="name" name="name" placeholder="Name" type="text" autoComplete='off' required />
+                            <input className="form-control" id="name" name="name" placeholder="Nom complet" type="text" autoComplete='off' required />
                             <span className="alert-error"></span>
                         </div>
                     </div>
@@ -24,13 +35,13 @@ const ContactForm = () => {
                 <div className="row">
                     <div className="col-lg-6">
                         <div className="form-group">
-                            <input className="form-control" id="email" name="email" placeholder="Email*" type="email" autoComplete='off' required />
+                            <input className="form-control" id="email" name="email" placeholder="Courriel*" type="email" autoComplete='off' required />
                             <span className="alert-error"></span>
                         </div>
                     </div>
                     <div className="col-lg-6">
                         <div className="form-group">
-                            <input className="form-control" id="phone" name="phone" placeholder="Phone" type="text" autoComplete='off' required />
+                            <input className="form-control" id="phone" name="phone" placeholder="Téléphone*" type="text" autoComplete='off' required />
                             <span className="alert-error"></span>
                         </div>
                     </div>
@@ -38,14 +49,14 @@ const ContactForm = () => {
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="form-group comments">
-                            <textarea className="form-control" id="comments" name="comments" placeholder="Tell Us About Project *" autoComplete='off' required></textarea>
+                            <textarea className="form-control" id="comments" name="comments" placeholder="Parlez-nous de vos besoins *" autoComplete='off' required></textarea>
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row submit-container">
                     <div className="col-lg-12">
                         <button type="submit" name="submit" id="submit">
-                            <i className="fa fa-paper-plane"></i> Get in Touch
+                            <i className="fa"></i> Prendre contact
                         </button>
                     </div>
                 </div>

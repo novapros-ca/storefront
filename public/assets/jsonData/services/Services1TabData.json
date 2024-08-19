@@ -8,30 +8,16 @@
             {
                 "id": 1,
                 "animationDelay": 0,
-                "icon": "flaticon-personal",
-                "title": "Investment Planning",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
+                "icon": "flaticon-finance-2",
+                "title": "Tenue de livres",
+                "text": "Nous nous chargeons d'effectuer et d’enregistrer les transactions financières de votre entreprise."
             },
             {
                 "id": 2,
-                "animationDelay": "",
-                "icon": "flaticon-career",
-                "title": "Markets Research",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
-            },
-            {
-                "id": 3,
-                "animationDelay": "",
-                "icon": "flaticon-group",
-                "title": "Consultancy & Advice",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
-            },
-            {
-                "id": 4,
-                "animationDelay": "",
-                "icon": "flaticon-solution-5",
-                "title": "Business Planning",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
+                "animationDelay": 0,
+                "icon": "flaticon-stats-1",
+                "title": "Gestion financière",
+                "text": "Nous vous aidons à planifier, organiser et contrôler vos ressources financières afin d'atteindre vos objectifs financiers."
             }
         ]
     },
@@ -44,30 +30,16 @@
             {
                 "id": 1,
                 "animationDelay": 0,
-                "icon": "flaticon-business-trip",
-                "title": "Strategy & Planning",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
+                "icon": " flaticon-meeting-1",
+                "title": "Coaching",
+                "text": "Nous vous accompagnons dans le but de développer, structurer et optimiser vos stratégies d'entreprises."
             },
             {
                 "id": 2,
-                "animationDelay": "",
-                "icon": "flaticon-online-store",
-                "title": "Online Business",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
-            },
-            {
-                "id": 3,
-                "animationDelay": "",
-                "icon": "flaticon-funds",
-                "title": "Saving & Investments",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
-            },
-            {
-                "id": 4,
-                "animationDelay": "",
-                "icon": "flaticon-career",
-                "title": "Markets Research",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
+                "animationDelay": 0,
+                "icon": "flaticon-team",
+                "title": "Logistique",
+                "text": "Nous contribuons à gérer efficacement le flux des biens, des informations et des ressource pour assurer la bonne livraison des produits et services."
             }
         ]
     },
@@ -80,30 +52,23 @@
             {
                 "id": 1,
                 "animationDelay": 0,
-                "icon": "flaticon-budget",
-                "title": "Investment Planning",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
+                "icon": "flaticon-money-1",
+                "title": "Gestion de la paie",
+                "text": "Nous traitons les salaires, les déclarations fiscales et les avantages sociaux des employés.\n\n\n\n\n\n\n"
             },
             {
                 "id": 2,
-                "animationDelay": "",
-                "icon": "flaticon-money-1",
-                "title": "Mutual Funds",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
+                "animationDelay": 0,
+                "icon": "flaticon-online-support",
+                "title": "Services administratifs",
+                "text": "Nous gérons la documentation, les communications internes et les tâches de soutien organisationnel."
             },
             {
                 "id": 3,
-                "animationDelay": "",
-                "icon": "flaticon-funds",
-                "title": "Saving & Investments",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
-            },
-            {
-                "id": 4,
-                "animationDelay": "",
-                "icon": "flaticon-world-globe",
-                "title": "Global Business",
-                "text": "Prevailed always tolerably discourse and loser assurance creatively coin applauded more uncommonly. Him everything trouble"
+                "animationDelay": 0,
+                "icon": "flaticon-employee",
+                "title": "Recrutement et formations",
+                "text": "Nous participons au recrutement et à la formation des employés"
             }
         ]
     }

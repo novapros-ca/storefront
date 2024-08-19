@@ -4,7 +4,7 @@ import BannerStyle5 from '@/components/banner/BannerStyle5';
 import BlogSolar from '@/components/blog/BlogSolar';
 import FeatureStyle4 from '@/components/feature/FeatureStyle4';
 import GalleryStyle4 from '@/components/gallery/GalleryStyle4';
-import PartnerStyle1 from '@/components/partner/PartnerStyle1';
+import CertificationStyle from '@/components/certifications/CertificationStyle';
 import ProcessStyle2 from '@/components/process/ProcessStyle2';
 import ServicesStyle4 from '@/components/services/ServicesStyle4';
 import TestimonialStyle1 from '@/components/testimonial/TestimonialStyle1';
@@ -25,7 +25,7 @@ const SolarEnergy = () => {
                 <ProcessStyle2 />
                 <TestimonialStyle1 sectionClass="bg-gray" shapeGreen={true} />
                 <GalleryStyle4 />
-                <PartnerStyle1 sectionClass="default-padding-bottom" />
+                <CertificationStyle sectionClass="default-padding-bottom" />
                 <BlogSolar sectionClass="bg-gray" />
             </LayoutStyle5>
         </>

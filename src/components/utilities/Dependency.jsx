@@ -7,10 +7,10 @@ const Dependency = () => {
   useEffect(() => {
     {
 
-      // Bootstrap Js 
+      // Bootstrap Js
       require('bootstrap/dist/js/bootstrap.bundle.js')
 
-      // WowJs 
+      // WowJs
       const WOW = require('wowjs/dist/wow.js');
       window.wow = new WOW.WOW({
         live: false
@@ -23,7 +23,7 @@ const Dependency = () => {
 
   return (
     <>
-      <ScrollToTop symbol={<i className="fal fa-long-arrow-up"></i>} />
+      <ScrollToTop symbol={<i className="fal fa-chevron-up"></i>} />
     </>
   );
 };

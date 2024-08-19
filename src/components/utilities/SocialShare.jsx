@@ -5,22 +5,17 @@ const SocialShare = () => {
     return (
         <>
             <li>
-                <Link className="facebook" href="https://www.facebook.com/" target="_blank">
+                <Link className="facebook" href="https://www.facebook.com/profile.php?id=61564415243700" target="_blank">
                     <i className="fab fa-facebook-f"></i>
                 </Link>
             </li>
             <li>
-                <Link className="twitter" href="https://twitter.com/" target="_blank">
-                    <i className="fab fa-twitter"></i>
+                <Link className="twitter" href="https://x.com/NovaProsCa" target="_blank">
+                    <i className="fab fa-x-twitter"></i>
                 </Link>
             </li>
             <li>
-                <Link className="https://pinterest.com/" href="https://www.pinterest.com/" target="_blank">
-                    <i className="fab fa-pinterest-p"></i>
-                </Link>
-            </li>
-            <li>
-                <Link className="linkedin" href="https://www.linkedin.com/" target="_blank">
+                <Link className="linkedin" href="https://www.linkedin.com/company/novapros/" target="_blank">
                     <i className="fab fa-linkedin-in"></i>
                 </Link>
             </li>
