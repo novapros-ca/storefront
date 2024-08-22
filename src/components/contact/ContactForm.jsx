@@ -4,22 +4,25 @@ import { toast } from 'react-toastify';
 
 const ContactForm = () => {
 
-    const handleForm = async (event) => {
+    const handleForm = (event) => {
+        const target = event.target;
         event.preventDefault()
-        const htmlCollections = event.target.elements;
+        const htmlCollections = target.elements;
         const formData = {
             name: htmlCollections.name.value,
             email: htmlCollections.email.value,
-            phone: htmlCollections.phone.value,
+            phone: htmlCollections.phone.value.replace(/\D/g, ''),
             comments: htmlCollections.comments.value,
         };
 
-        const t = await fetch("./.netlify/functions/triggerContactEmail", {
+        fetch("./.netlify/functions/triggerContactEmail", {
             method: "POST",
             body: JSON.stringify(formData)
         });
 
         toast.success("Merci, nous vous contacterons bientôt.")
+
+        target.reset();
     }
     return (
         <>
