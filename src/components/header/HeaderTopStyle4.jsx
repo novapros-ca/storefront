@@ -10,7 +10,7 @@ const HeaderTopStyle4 = () => {
                         <div className="col-lg-7">
                             <ul className="item-flex">
                                 <li>
-                                    <a target="_blank" href="https://maps.app.goo.gl/z9eyKD5zcK33aD3x7"><i className="fas fa-map-marker-alt"></i> 126 53ème rue Est, Québec, QC</a>
+                                    <a target="_blank" href="https://maps.app.goo.gl/z9eyKD5zcK33aD3x7"><i className="fas fa-map-marker-alt"></i> 126 53e rue Est, Québec, QC</a>
                                 </li>
                                 <li>
                                     <a href="tel:4188007784" target="_blank"><i className="fas fa-phone-alt"></i>(418) 800-7784</a>

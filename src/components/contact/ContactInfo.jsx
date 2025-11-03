@@ -22,7 +22,7 @@ const ContactInfo = () => {
                         <div className="info">
                             <h5 className="title">Nous trouvez</h5>
                             <p>
-                                <a target="_blank" href="https://maps.app.goo.gl/z9eyKD5zcK33aD3x7">126 53ème rue Est, Québec, QC</a>
+                                <a target="_blank" href="https://maps.app.goo.gl/z9eyKD5zcK33aD3x7">126 53e rue Est, Québec, QC</a>
                             </p>
                         </div>
                     </li>
