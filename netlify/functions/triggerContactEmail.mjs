@@ -26,6 +26,7 @@ const handler = async function(event) {
                     phone: formData.phone,
                     email: formData.email,
                     comments: formData.comments,
+                    currentYear: new Date().getFullYear(),
                 },
             }),
         }
