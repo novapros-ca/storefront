@@ -22,7 +22,7 @@ const ContactInfo = () => {
                         <div className="info">
                             <h5 className="title">Nous trouvez</h5>
                             <p>
-                                <a href="https://maps.app.goo.gl/FUri5B2gw3BFpBKHA" target="_blank">213-630 rue Francis-Byrne, Québec, QC</a>
+                                <a target="_blank" href="https://maps.app.goo.gl/z9eyKD5zcK33aD3x7"><i className="fas fa-map-marker-alt"></i> 126 53ème rue Est, Québec, QC</a>
                             </p>
                         </div>
                     </li>
