@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "netlify dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@azure/msal-node": "2.6.4",
     "@netlify/functions": "^2.8.1",
     "@next/third-parties": "^14.2.8",
     "bootstrap": "^5.3.3",
@@ -33,6 +34,10 @@
     "@types/react": "18.3.3",
     "eslint": "^9.9.1",
     "eslint-config-next": "^14.2.8",
+    "netlify-cli": "^24.2.0",
     "typescript": "5.5.4"
+  },
+  "engines": {
+    "node": ">=20.12.2"
   }
 }
