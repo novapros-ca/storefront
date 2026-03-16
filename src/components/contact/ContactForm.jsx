@@ -15,7 +15,7 @@ const ContactForm = () => {
             comments: htmlCollections.comments.value,
         };
 
-        fetch("./.netlify/functions/triggerContactEmail", {
+        fetch("./.netlify/functions/submitContactForm", {
             method: "POST",
             body: JSON.stringify(formData)
         });
