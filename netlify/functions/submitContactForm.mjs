@@ -54,7 +54,8 @@ export const handler = async (event) => {
                     formData.name ?? "",
                     formData.email ?? "",
                     formData.phone ?? "",
-                    formData.comments ?? ""
+                    formData.comments ?? "",
+                    ""
                 ]
             ],
         };
