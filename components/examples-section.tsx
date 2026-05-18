@@ -54,9 +54,9 @@ export function ExamplesSection() {
         </div>
 
         <div className="text-center">
-          <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+          <Button asChild size="default" className="bg-primary hover:bg-primary/90 text-primary-foreground h-10 sm:h-11 text-sm sm:text-base">
             <Link href="#contact">
-              Discuter d&apos;un besoin similaire
+              Discuter de mon besoin
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

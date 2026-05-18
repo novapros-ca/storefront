@@ -55,9 +55,9 @@ export function RealEstateSection() {
               ))}
             </div>
 
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button asChild size="default" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto h-10 sm:h-11 text-sm sm:text-base">
               <Link href="#contact">
-                Discuter de ma gestion immobilière
+                Discuter de ma gestion
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -66,39 +66,39 @@ export function RealEstateSection() {
           {/* Right - Example Card */}
           <div className="relative">
             <Card className="bg-primary-foreground/10 border-primary-foreground/20 backdrop-blur-sm">
-              <CardContent className="p-6 lg:p-8">
-                <div className="flex items-center gap-2 mb-6">
-                  <div className="w-3 h-3 rounded-full bg-accent"></div>
-                  <span className="text-sm font-medium text-primary-foreground">Exemple de mandat</span>
+              <CardContent className="p-4 sm:p-6 lg:p-8">
+                <div className="flex items-center gap-2 mb-4 sm:mb-6">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-accent"></div>
+                  <span className="text-xs sm:text-sm font-medium text-primary-foreground">Exemple de mandat</span>
                 </div>
                 
-                <h3 className="text-lg font-semibold text-primary-foreground mb-4">
-                  Organisation des dépenses, fournisseurs et documents par immeuble
+                <h3 className="text-base sm:text-lg font-semibold text-primary-foreground mb-3 sm:mb-4">
+                  Organisation des dépenses et documents par immeuble
                 </h3>
                 
-                <p className="text-primary-foreground/70 leading-relaxed mb-6">
-                  Organisation des dépenses, fournisseurs et documents par immeuble pour simplifier les suivis administratifs et comptables.
+                <p className="text-xs sm:text-sm text-primary-foreground/70 leading-relaxed mb-4 sm:mb-6">
+                  Simplifier les suivis administratifs et comptables de vos immeubles.
                 </p>
 
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between py-3 border-b border-primary-foreground/10">
-                    <span className="text-sm text-primary-foreground/70">Immeuble A - Centre-ville</span>
-                    <span className="text-sm font-medium text-primary-foreground">12 unités</span>
+                <div className="space-y-2 sm:space-y-3">
+                  <div className="flex items-center justify-between py-2 sm:py-3 border-b border-primary-foreground/10">
+                    <span className="text-xs sm:text-sm text-primary-foreground/70">Immeuble A</span>
+                    <span className="text-xs sm:text-sm font-medium text-primary-foreground">12 unités</span>
                   </div>
-                  <div className="flex items-center justify-between py-3 border-b border-primary-foreground/10">
-                    <span className="text-sm text-primary-foreground/70">Immeuble B - Plateau</span>
-                    <span className="text-sm font-medium text-primary-foreground">8 unités</span>
+                  <div className="flex items-center justify-between py-2 sm:py-3 border-b border-primary-foreground/10">
+                    <span className="text-xs sm:text-sm text-primary-foreground/70">Immeuble B</span>
+                    <span className="text-xs sm:text-sm font-medium text-primary-foreground">8 unités</span>
                   </div>
-                  <div className="flex items-center justify-between py-3">
-                    <span className="text-sm text-primary-foreground/70">Immeuble C - Rosemont</span>
-                    <span className="text-sm font-medium text-primary-foreground">6 unités</span>
+                  <div className="flex items-center justify-between py-2 sm:py-3">
+                    <span className="text-xs sm:text-sm text-primary-foreground/70">Immeuble C</span>
+                    <span className="text-xs sm:text-sm font-medium text-primary-foreground">6 unités</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             {/* Decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-accent/20 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>

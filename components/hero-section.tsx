@@ -4,29 +4,29 @@ import { ArrowRight, FileText, Users, Settings, CheckCircle, BarChart3, Calendar
 
 export function HeroSection() {
   return (
-    <section className="relative py-16 lg:py-24 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-4 sm:space-y-6">
+              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
                 Simplifiez votre gestion avec un soutien fiable pour vos finances, vos RH et vos opérations.
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-                NovaPros accompagne les PME et les propriétaires immobiliers au Québec avec des services de tenue de livres, de soutien RH administratif et de soutien opérationnel, adaptés aux réalités des petites équipes et de la gestion immobilière.
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+                NovaPros accompagne les PME et les propriétaires immobiliers au Québec avec des services de tenue de livres, de soutien RH administratif et de soutien opérationnel.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button asChild size="default" className="bg-accent hover:bg-accent/90 text-accent-foreground h-10 sm:h-11 text-sm sm:text-base">
                 <Link href="#contact">
                   Planifier une discussion
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary/20 hover:bg-primary/5">
+              <Button asChild variant="outline" size="default" className="border-primary/20 hover:bg-primary/5 h-10 sm:h-11 text-sm sm:text-base">
                 <Link href="#services">
                   Voir nos services
                 </Link>
@@ -34,7 +34,7 @@ export function HeroSection() {
             </div>
 
             {/* Reassurance line */}
-            <p className="text-sm text-muted-foreground border-l-2 border-accent pl-4">
+            <p className="text-xs sm:text-sm text-muted-foreground border-l-2 border-accent pl-3 sm:pl-4">
               Services offerts aux PME et propriétaires immobiliers du Québec.
             </p>
           </div>

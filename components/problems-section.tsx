@@ -73,9 +73,9 @@ export function ProblemsSection() {
         </div>
 
         <div className="text-center">
-          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+          <Button asChild size="default" className="bg-accent hover:bg-accent/90 text-accent-foreground h-10 sm:h-11 text-sm sm:text-base px-4 sm:px-6">
             <Link href="#services">
-              Voir comment NovaPros peut vous aider
+              Voir nos solutions
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

@@ -39,9 +39,9 @@ export function CareersSection() {
               NovaPros est une entreprise en croissance qui recherche des personnes rigoureuses, humaines et organisées pour soutenir les entreprises dans leur gestion quotidienne.
             </p>
 
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto">
+            <Button asChild size="default" className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto h-10 sm:h-11 text-sm">
               <Link href="#contact">
-                Soumettre une candidature spontanée
+                Candidature spontanée
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
