@@ -1,0 +1,110 @@
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { BookOpen, Users, Settings, Check, ArrowRight, Info } from "lucide-react"
+
+const services = [
+  {
+    icon: BookOpen,
+    title: "Tenue de livres",
+    description: "Gardez vos livres à jour et vos informations financières mieux organisées.",
+    items: [
+      "Saisie et classement des transactions",
+      "Suivi des revenus et dépenses",
+      "Suivi des fournisseurs",
+      "Conciliations",
+      "Préparation des informations pour le comptable",
+      "Rapports de gestion simples",
+    ],
+    cta: "Discuter de ma tenue de livres",
+  },
+  {
+    icon: Users,
+    title: "Soutien RH et administratif",
+    description: "Structurez l'administration liée à vos employés, sans complexifier votre gestion.",
+    items: [
+      "Dossiers employés",
+      "Documents administratifs",
+      "Suivis internes",
+      "Soutien à l'intégration",
+      "Suivi de formations ou informations employés",
+      "Processus administratifs RH",
+    ],
+    note: "NovaPros soutient l'administration RH, sans remplacer un cabinet juridique ou une firme RH spécialisée.",
+    cta: "Discuter de mes besoins RH administratifs",
+  },
+  {
+    icon: Settings,
+    title: "Soutien opérationnel",
+    description: "Mettez de l'ordre dans vos suivis, vos processus et vos opérations quotidiennes.",
+    items: [
+      "Suivis administratifs",
+      "Organisation des fichiers",
+      "Documentation interne",
+      "Coordination de tâches",
+      "Suivi fournisseurs",
+      "Structure de courriels et documents",
+      "Tâches récurrentes",
+    ],
+    cta: "Structurer mes opérations",
+  },
+]
+
+export function ServicesSection() {
+  return (
+    <section className="py-16 lg:py-24 bg-secondary/30" id="services">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+            Un soutien concret pour structurer votre gestion
+          </h2>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            NovaPros vous accompagne dans les tâches essentielles qui soutiennent la santé administrative, financière et opérationnelle de votre organisation.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+          {services.map((service, index) => (
+            <Card key={index} className="bg-card border-border flex flex-col h-full">
+              <CardHeader className="pb-4">
+                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                  <service.icon className="h-7 w-7 text-accent" />
+                </div>
+                <CardTitle className="text-xl font-semibold text-foreground">{service.title}</CardTitle>
+                <CardDescription className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex-1 flex flex-col">
+                <ul className="space-y-3 flex-1">
+                  {service.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start gap-3">
+                      <Check className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                {service.note && (
+                  <div className="flex items-start gap-2 mt-4 p-3 bg-secondary/50 rounded-lg">
+                    <Info className="h-4 w-4 text-muted-foreground flex-shrink-0 mt-0.5" />
+                    <p className="text-xs text-muted-foreground">{service.note}</p>
+                  </div>
+                )}
+                <Button asChild className="w-full mt-6 bg-primary hover:bg-primary/90 text-primary-foreground">
+                  <Link href="#contact">
+                    {service.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto">
+          Chaque accompagnement est adapté à votre réalité, à votre volume de tâches et à votre niveau de structure actuel.
+        </p>
+      </div>
+    </section>
+  )
+}
