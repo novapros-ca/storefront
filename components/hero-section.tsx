@@ -4,17 +4,17 @@ import { ArrowRight, FileText, Users, CheckCircle, BarChart3, Calendar } from "l
 
 export function HeroSection() {
   return (
-    <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
       <div className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top_left,_rgba(0,0,0,0.04),_transparent_45%),radial-gradient(circle_at_top_right,_rgba(119,147,120,0.10),_transparent_35%)]" />
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-6 sm:space-y-8">
-            <div className="space-y-4 sm:space-y-6 max-w-2xl">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.05] text-balance">
+          <div className="space-y-5 sm:space-y-7">
+            <div className="space-y-4 sm:space-y-5 max-w-xl lg:max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.5rem] font-semibold tracking-tight text-foreground leading-[1.08] text-balance">
                 Simplifiez votre gestion avec un soutien fiable pour vos finances, vos RH et vos opérations.
               </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              <p className="text-base sm:text-lg lg:text-[1.125rem] text-muted-foreground leading-relaxed max-w-lg">
                 NovaPros accompagne les PME et les propriétaires immobiliers au Québec avec des services de tenue de livres, de soutien RH administratif et de soutien opérationnel.
               </p>
             </div>
