@@ -9,8 +9,9 @@ export async function POST(request: Request) {
     const parsed = contactPayloadSchema.safeParse(json)
 
     if (!parsed.success) {
+      const firstError = parsed.error.errors[0]?.message ?? "Données de formulaire invalides."
       return NextResponse.json(
-        { message: "Donnees de formulaire invalides." },
+        { message: firstError },
         { status: 400 },
       )
     }
