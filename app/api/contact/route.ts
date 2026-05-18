@@ -28,7 +28,9 @@ export async function POST(request: Request) {
     if (!forwarded.ok) {
       if (forwarded.status === 503) {
         return NextResponse.json(
-          { message: "Service de contact non configure sur ce serveur." },
+          {
+            message: `Configuration manquante: ${forwarded.missing.join(", ")}`,
+          },
           { status: 503 },
         )
       }

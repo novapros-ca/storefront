@@ -14,35 +14,40 @@ type GraphConfig = {
   tableName: string
 }
 
-function getGraphConfig(): GraphConfig | null {
-  const tenantId = process.env.GRAPH_TENANT_ID
-  const clientId = process.env.GRAPH_CLIENT_ID
-  const clientSecret = process.env.GRAPH_CLIENT_SECRET
-  const driveId = process.env.EXCEL_DRIVE_ID
-  const itemId = process.env.EXCEL_ITEM_ID
-  const sheetName = process.env.EXCEL_SHEET_NAME
-  const tableName = process.env.EXCEL_TABLE_NAME
+type GraphConfigResult =
+  | { ok: true; config: GraphConfig }
+  | { ok: false; missing: string[] }
 
-  if (
-    !tenantId ||
-    !clientId ||
-    !clientSecret ||
-    !driveId ||
-    !itemId ||
-    !sheetName ||
-    !tableName
-  ) {
-    return null
+function getGraphConfig(): GraphConfigResult {
+  const envMap = {
+    GRAPH_TENANT_ID: process.env.GRAPH_TENANT_ID,
+    GRAPH_CLIENT_ID: process.env.GRAPH_CLIENT_ID,
+    GRAPH_CLIENT_SECRET: process.env.GRAPH_CLIENT_SECRET,
+    EXCEL_DRIVE_ID: process.env.EXCEL_DRIVE_ID,
+    EXCEL_ITEM_ID: process.env.EXCEL_ITEM_ID,
+    EXCEL_SHEET_NAME: process.env.EXCEL_SHEET_NAME,
+    EXCEL_TABLE_NAME: process.env.EXCEL_TABLE_NAME,
+  }
+
+  const missing = Object.entries(envMap)
+    .filter(([, value]) => !value)
+    .map(([name]) => name)
+
+  if (missing.length > 0) {
+    return { ok: false, missing }
   }
 
   return {
-    tenantId,
-    clientId,
-    clientSecret,
-    driveId,
-    itemId,
-    sheetName,
-    tableName,
+    ok: true,
+    config: {
+      tenantId: envMap.GRAPH_TENANT_ID,
+      clientId: envMap.GRAPH_CLIENT_ID,
+      clientSecret: envMap.GRAPH_CLIENT_SECRET,
+      driveId: envMap.EXCEL_DRIVE_ID,
+      itemId: envMap.EXCEL_ITEM_ID,
+      sheetName: envMap.EXCEL_SHEET_NAME,
+      tableName: envMap.EXCEL_TABLE_NAME,
+    },
   }
 }
 
@@ -96,12 +101,13 @@ function escapeExcelIdentifier(value: string): string {
 }
 
 export async function forwardContactToExcel(payload: ContactPayload) {
-  const config = getGraphConfig()
+  const configResult = getGraphConfig()
 
-  if (!config) {
-    return { ok: false as const, status: 503 }
+  if (!configResult.ok) {
+    return { ok: false as const, status: 503, missing: configResult.missing }
   }
 
+  const { config } = configResult
   const token = await fetchAccessToken(config)
   const phoneDigits = payload.phone.replace(/\D/g, "")
   const contextualMessage = [
@@ -141,8 +147,8 @@ export async function forwardContactToExcel(payload: ContactPayload) {
   })
 
   if (!response.ok) {
-    return { ok: false as const, status: 502 }
+    return { ok: false as const, status: 502, missing: [] }
   }
 
-  return { ok: true as const, status: 200 }
+  return { ok: true as const, status: 200, missing: [] }
 }
