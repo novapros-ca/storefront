@@ -40,13 +40,13 @@ function getGraphConfig(): GraphConfigResult {
   return {
     ok: true,
     config: {
-      tenantId: envMap.GRAPH_TENANT_ID,
-      clientId: envMap.GRAPH_CLIENT_ID,
-      clientSecret: envMap.GRAPH_CLIENT_SECRET,
-      driveId: envMap.EXCEL_DRIVE_ID,
-      itemId: envMap.EXCEL_ITEM_ID,
-      sheetName: envMap.EXCEL_SHEET_NAME,
-      tableName: envMap.EXCEL_TABLE_NAME,
+      tenantId: envMap.GRAPH_TENANT_ID!,
+      clientId: envMap.GRAPH_CLIENT_ID!,
+      clientSecret: envMap.GRAPH_CLIENT_SECRET!,
+      driveId: envMap.EXCEL_DRIVE_ID!,
+      itemId: envMap.EXCEL_ITEM_ID!,
+      sheetName: envMap.EXCEL_SHEET_NAME!,
+      tableName: envMap.EXCEL_TABLE_NAME!,
     },
   }
 }
