@@ -21,7 +21,7 @@ const qualities = [
 
 export function CareersSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-secondary/30" id="carrieres">
+    <section className="scroll-mt-24 py-12 sm:py-16 lg:py-24 bg-secondary/30" id="carrieres">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
@@ -48,7 +48,7 @@ export function CareersSection() {
           </div>
 
           {/* Right - Cards */}
-          <div className="grid grid-cols-2 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <Card className="bg-card border-border">
               <CardContent className="p-4 sm:p-6">
                 <h3 className="text-sm sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">Profils recherchés</h3>

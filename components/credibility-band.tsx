@@ -1,4 +1,4 @@
-import { Building2, BookOpen, Users, Settings, Heart, CheckSquare } from "lucide-react"
+import { Building2, BookOpen, Users, Settings, Heart } from "lucide-react"
 
 const badges = [
   { icon: Building2, label: "PME du Québec" },

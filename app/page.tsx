@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/hero-section"
 import { CredibilityBand } from "@/components/credibility-band"
 import { ProblemsSection } from "@/components/problems-section"
 import { ServicesSection } from "@/components/services-section"
-import { RealEstateSection } from "@/components/real-estate-section"
 import { ApproachSection } from "@/components/approach-section"
 import { ExamplesSection } from "@/components/examples-section"
 import { TrustSection } from "@/components/trust-section"
@@ -13,13 +12,12 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main id="main-content" className="min-h-screen">
       <Header />
       <HeroSection />
       <CredibilityBand />
       <ProblemsSection />
       <ServicesSection />
-      <RealEstateSection />
       <ApproachSection />
       <ExamplesSection />
       <TrustSection />

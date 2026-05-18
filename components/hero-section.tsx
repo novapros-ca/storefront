@@ -1,19 +1,20 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, FileText, Users, Settings, CheckCircle, BarChart3, Calendar } from "lucide-react"
+import { ArrowRight, FileText, Users, CheckCircle, BarChart3, Calendar } from "lucide-react"
 
 export function HeroSection() {
   return (
     <section className="relative py-12 sm:py-16 lg:py-24 overflow-hidden">
+      <div className="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top_left,_rgba(0,0,0,0.04),_transparent_45%),radial-gradient(circle_at_top_right,_rgba(119,147,120,0.10),_transparent_35%)]" />
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-6 sm:space-y-8">
-            <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-foreground leading-tight text-balance">
+            <div className="space-y-4 sm:space-y-6 max-w-2xl">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-semibold tracking-tight text-foreground leading-[1.05] text-balance">
                 Simplifiez votre gestion avec un soutien fiable pour vos finances, vos RH et vos opérations.
               </h1>
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 NovaPros accompagne les PME et les propriétaires immobiliers au Québec avec des services de tenue de livres, de soutien RH administratif et de soutien opérationnel.
               </p>
             </div>
@@ -34,7 +35,7 @@ export function HeroSection() {
             </div>
 
             {/* Reassurance line */}
-            <p className="text-xs sm:text-sm text-muted-foreground border-l-2 border-accent pl-3 sm:pl-4">
+            <p className="text-xs sm:text-sm text-muted-foreground border-l-2 border-accent pl-3 sm:pl-4 max-w-md">
               Services offerts aux PME et propriétaires immobiliers du Québec.
             </p>
           </div>
@@ -43,7 +44,7 @@ export function HeroSection() {
           <div className="relative mt-8 lg:mt-0">
             {/* Mobile Layout - Simple 2x2 grid */}
             <div className="grid grid-cols-2 gap-3 lg:hidden">
-              <div className="bg-card rounded-xl shadow-sm border border-border p-4 space-y-2">
+              <div className="bg-card rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.08)] border border-border/70 p-4 space-y-2.5">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-medium text-muted-foreground">Suivi financier</span>
                   <BarChart3 className="h-4 w-4 text-accent" />
@@ -52,12 +53,12 @@ export function HeroSection() {
                   <span className="text-xs text-foreground">Transactions</span>
                   <span className="text-xs font-semibold text-foreground">147</span>
                 </div>
-                <div className="w-full bg-secondary rounded-full h-1.5">
+                <div className="w-full bg-secondary rounded-full h-1.5 overflow-hidden">
                   <div className="bg-accent h-1.5 rounded-full" style={{ width: "78%" }}></div>
                 </div>
               </div>
 
-              <div className="bg-card rounded-xl shadow-sm border border-border p-4">
+              <div className="bg-card rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.08)] border border-border/70 p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
                     <FileText className="h-4 w-4 text-primary" />
@@ -70,7 +71,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="bg-card rounded-xl shadow-sm border border-border p-4">
+              <div className="bg-card rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.08)] border border-border/70 p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
                     <Calendar className="h-4 w-4 text-accent" />
@@ -83,7 +84,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              <div className="bg-card rounded-xl shadow-sm border border-border p-4">
+              <div className="bg-card rounded-2xl shadow-[0_16px_40px_rgba(0,0,0,0.08)] border border-border/70 p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Users className="h-4 w-4 text-primary" />
@@ -95,9 +96,10 @@ export function HeroSection() {
             </div>
 
             {/* Desktop Layout - Absolute positioned cards */}
-            <div className="hidden lg:block relative w-full h-[500px]">
+            <div className="hidden lg:block relative w-full h-[560px]">
+              <div className="absolute inset-6 rounded-[2rem] border border-border/50 bg-[radial-gradient(circle_at_top_left,rgba(0,0,0,0.03),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.92),rgba(255,255,255,0.78))] shadow-[0_32px_90px_rgba(0,0,0,0.08)]" />
               {/* Main Card */}
-              <div className="absolute top-0 left-8 w-72 bg-card rounded-xl shadow-lg border border-border p-6 space-y-4">
+              <div className="absolute top-4 left-6 w-80 bg-card rounded-[1.5rem] shadow-[0_18px_50px_rgba(0,0,0,0.10)] border border-border/60 p-6 space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-muted-foreground">Suivi financier</span>
                   <BarChart3 className="h-5 w-5 text-accent" />
@@ -107,7 +109,7 @@ export function HeroSection() {
                     <span className="text-sm text-foreground">Transactions traitées</span>
                     <span className="text-sm font-semibold text-foreground">147</span>
                   </div>
-                  <div className="w-full bg-secondary rounded-full h-2">
+                  <div className="w-full bg-secondary rounded-full h-2 overflow-hidden">
                     <div className="bg-accent h-2 rounded-full" style={{ width: "78%" }}></div>
                   </div>
                   <div className="flex items-center justify-between">
@@ -118,9 +120,9 @@ export function HeroSection() {
               </div>
 
               {/* Secondary Card - Documents */}
-              <div className="absolute top-32 right-0 w-64 bg-card rounded-xl shadow-lg border border-border p-5 space-y-3">
+              <div className="absolute top-36 right-0 w-72 bg-card rounded-[1.5rem] shadow-[0_18px_50px_rgba(0,0,0,0.10)] border border-border/60 p-5 space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-2xl bg-secondary flex items-center justify-center">
                     <FileText className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -141,9 +143,9 @@ export function HeroSection() {
               </div>
 
               {/* Third Card - Tasks */}
-              <div className="absolute bottom-12 left-0 w-64 bg-card rounded-xl shadow-lg border border-border p-5 space-y-3">
+              <div className="absolute bottom-10 left-2 w-72 bg-card rounded-[1.5rem] shadow-[0_18px_50px_rgba(0,0,0,0.10)] border border-border/60 p-5 space-y-3">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-2xl bg-secondary flex items-center justify-center">
                     <Calendar className="h-5 w-5 text-accent" />
                   </div>
                   <div>
@@ -168,9 +170,9 @@ export function HeroSection() {
               </div>
 
               {/* Fourth Card - RH */}
-              <div className="absolute bottom-0 right-8 w-56 bg-card rounded-xl shadow-lg border border-border p-5">
+              <div className="absolute bottom-4 right-6 w-56 bg-card rounded-[1.5rem] shadow-[0_18px_50px_rgba(0,0,0,0.10)] border border-border/60 p-5">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-2xl bg-secondary flex items-center justify-center">
                     <Users className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -181,8 +183,8 @@ export function HeroSection() {
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -top-4 right-24 w-20 h-20 bg-accent/5 rounded-full blur-xl"></div>
-              <div className="absolute bottom-24 left-32 w-16 h-16 bg-primary/5 rounded-full blur-xl"></div>
+              <div className="absolute -top-3 right-24 w-20 h-20 bg-accent/5 rounded-full blur-2xl"></div>
+              <div className="absolute bottom-24 left-32 w-16 h-16 bg-primary/5 rounded-full blur-2xl"></div>
             </div>
           </div>
         </div>

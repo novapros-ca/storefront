@@ -23,7 +23,7 @@ const features = [
 
 export function RealEstateSection() {
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-primary text-primary-foreground" id="immobilier">
+    <section className="scroll-mt-24 py-12 sm:py-16 lg:py-24 bg-primary text-primary-foreground" id="immobilier">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}

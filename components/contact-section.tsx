@@ -7,32 +7,63 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Card, CardContent } from "@/components/ui/card"
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react"
-
-const needTypes = [
-  "Tenue de livres",
-  "Soutien RH administratif",
-  "Soutien opérationnel",
-  "Propriétaire immobilier",
-  "Candidature",
-  "Autre",
-]
+import { Phone, MapPin, Clock3, Send, CheckCircle } from "lucide-react"
+import { contactNeedTypes, siteConfig } from "@/content/site-content"
 
 export function ContactSection() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const [needType, setNeedType] = useState("")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setErrorMessage("")
     setIsLoading(true)
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-    setIsLoading(false)
-    setIsSubmitted(true)
+
+    const form = e.currentTarget
+    const formData = new FormData(form)
+
+    const payload = {
+      name: String(formData.get("name") ?? ""),
+      company: String(formData.get("company") ?? ""),
+      email: String(formData.get("email") ?? ""),
+      phone: String(formData.get("phone") ?? ""),
+      needType,
+      message: String(formData.get("message") ?? ""),
+      website: String(formData.get("website") ?? ""),
+    }
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        const data = (await response.json().catch(() => null)) as
+          | { message?: string }
+          | null
+        throw new Error(data?.message ?? "Une erreur est survenue.")
+      }
+
+      setIsSubmitted(true)
+      form.reset()
+      setNeedType("")
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : "Impossible d'envoyer votre demande pour le moment.",
+      )
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (
-    <section className="py-12 sm:py-16 lg:py-24 bg-background" id="contact">
+    <section className="scroll-mt-24 py-12 sm:py-16 lg:py-24 bg-background" id="contact">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
@@ -49,26 +80,14 @@ export function ContactSection() {
             <div>
               <h3 className="text-lg font-semibold text-foreground mb-4 lg:mb-6">Coordonnées</h3>
               <div className="space-y-3 sm:space-y-4">
-                <a href="mailto:info@novapros.ca" className="flex items-center gap-3 sm:gap-4 group">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="text-xs sm:text-sm text-muted-foreground">Courriel</p>
-                    <span className="text-sm sm:text-base text-foreground group-hover:text-accent transition-colors truncate block">
-                      info@novapros.ca
-                    </span>
-                  </div>
-                </a>
-
-                <a href="tel:+14185551234" className="flex items-center gap-3 sm:gap-4 group">
+                <a href={`tel:${siteConfig.phoneHref}`} className="flex items-center gap-3 sm:gap-4 group">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
                     <p className="text-xs sm:text-sm text-muted-foreground">Téléphone</p>
                     <span className="text-sm sm:text-base text-foreground group-hover:text-accent transition-colors">
-                      (418) 555-1234
+                      {siteConfig.phoneDisplay}
                     </span>
                   </div>
                 </a>
@@ -78,8 +97,19 @@ export function ContactSection() {
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Région</p>
-                    <p className="text-sm sm:text-base text-foreground">Québec</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Adresse</p>
+                    <p className="text-sm sm:text-base text-foreground">{siteConfig.address}</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Clock3 className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Heures</p>
+                    <p className="text-sm sm:text-base text-foreground">{siteConfig.hoursWeekday}</p>
+                    <p className="text-sm sm:text-base text-foreground">{siteConfig.hoursWeekend}</p>
                   </div>
                 </div>
               </div>
@@ -157,19 +187,29 @@ export function ContactSection() {
 
                   <div className="space-y-1.5 sm:space-y-2">
                     <Label htmlFor="need-type" className="text-xs sm:text-sm">Type de besoin *</Label>
-                    <Select name="need-type" required>
-                      <SelectTrigger className="bg-background h-9 sm:h-10 text-sm">
+                    <Select value={needType} onValueChange={setNeedType} required>
+                      <SelectTrigger id="need-type" className="bg-background h-9 sm:h-10 text-sm">
                         <SelectValue placeholder="Sélectionnez un type de besoin" />
                       </SelectTrigger>
                       <SelectContent>
-                        {needTypes.map((type) => (
-                          <SelectItem key={type} value={type.toLowerCase().replace(/\s+/g, "-")}>
-                            {type}
+                        {contactNeedTypes.map((type) => (
+                          <SelectItem key={type.value} value={type.value}>
+                            {type.label}
                           </SelectItem>
                         ))}
                       </SelectContent>
                     </Select>
+                    <input type="hidden" name="needType" value={needType} required />
                   </div>
+
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                    aria-hidden="true"
+                  />
 
                   <div className="space-y-1.5 sm:space-y-2">
                     <Label htmlFor="message" className="text-xs sm:text-sm">Message *</Label>
@@ -184,9 +224,14 @@ export function ContactSection() {
                   </div>
 
                   <div className="flex flex-col gap-3 sm:gap-4">
+                    {errorMessage && (
+                      <p className="text-xs sm:text-sm text-destructive" role="alert">
+                        {errorMessage}
+                      </p>
+                    )}
                     <Button
                       type="submit"
-                      disabled={isLoading}
+                      disabled={isLoading || !needType}
                       className="bg-accent hover:bg-accent/90 text-accent-foreground w-full h-10 sm:h-11 text-sm"
                     >
                       {isLoading ? (

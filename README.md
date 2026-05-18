@@ -22,6 +22,33 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Quality Checks
+
+Run before every merge:
+
+```bash
+pnpm lint
+pnpm build
+```
+
+## Contact Form Configuration
+
+The contact form submits to `POST /api/contact` and writes leads directly to a Microsoft Excel table via Microsoft Graph.
+
+Set these environment variables in local and production:
+
+```bash
+GRAPH_TENANT_ID=""
+GRAPH_CLIENT_ID=""
+GRAPH_CLIENT_SECRET=""
+EXCEL_DRIVE_ID=""
+EXCEL_ITEM_ID=""
+EXCEL_SHEET_NAME=""
+EXCEL_TABLE_NAME=""
+```
+
+If one of these variables is missing, the endpoint returns `503` by design.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 ## Learn More

@@ -1,13 +1,6 @@
 import Link from "next/link"
-import { Mail, Phone, MapPin } from "lucide-react"
-
-const navLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Propriétaires immobiliers", href: "#immobilier" },
-  { label: "Approche", href: "#approche" },
-  { label: "Carrières", href: "#carrieres" },
-  { label: "Contact", href: "#contact" },
-]
+import { Phone, MapPin, Clock3 } from "lucide-react"
+import { navItems, siteConfig } from "@/content/site-content"
 
 export function Footer() {
   return (
@@ -16,11 +9,13 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
           {/* Logo and Description */}
           <div className="col-span-2 lg:col-span-1 space-y-3 sm:space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary-foreground rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-base sm:text-lg">N</span>
-              </div>
-              <span className="font-semibold text-base sm:text-lg text-primary-foreground">NovaPros</span>
+            <div className="flex items-center gap-3">
+              <img
+                src="/logo-white.svg"
+                alt="NovaPros Logo"
+                className="h-7 sm:h-8 w-auto"
+              />
+              <span className="font-semibold text-base sm:text-lg text-primary-foreground">{siteConfig.name}</span>
             </div>
             <p className="text-xs sm:text-sm text-primary-foreground/70 leading-relaxed">
               Soutien en tenue de livres, administration RH et opérations pour PME et propriétaires immobiliers au Québec.
@@ -31,7 +26,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-primary-foreground text-sm sm:text-base mb-3 sm:mb-4">Navigation</h4>
             <ul className="space-y-2 sm:space-y-3">
-              {navLinks.map((link) => (
+              {navItems.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -50,25 +45,24 @@ export function Footer() {
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a
-                  href="mailto:info@novapros.ca"
-                  className="flex items-center gap-2 text-xs sm:text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                >
-                  <Mail className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
-                  <span className="truncate">info@novapros.ca</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+14185551234"
+                  href={`tel:${siteConfig.phoneHref}`}
                   className="flex items-center gap-2 text-xs sm:text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
-                  (418) 555-1234
+                  {siteConfig.phoneDisplay}
                 </a>
               </li>
               <li className="flex items-center gap-2 text-xs sm:text-sm text-primary-foreground/70">
                 <MapPin className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
-                Québec, Canada
+                {siteConfig.address}
+              </li>
+              <li className="flex items-center gap-2 text-xs sm:text-sm text-primary-foreground/70">
+                <Clock3 className="h-3.5 w-3.5 sm:h-4 sm:w-4 flex-shrink-0" />
+                <span className="block">
+                  {siteConfig.hoursWeekday}
+                  <br />
+                  {siteConfig.hoursWeekend}
+                </span>
               </li>
             </ul>
           </div>
@@ -80,7 +74,6 @@ export function Footer() {
               <li className="text-xs sm:text-sm text-primary-foreground/70">Tenue de livres</li>
               <li className="text-xs sm:text-sm text-primary-foreground/70">Soutien RH administratif</li>
               <li className="text-xs sm:text-sm text-primary-foreground/70">Soutien opérationnel</li>
-              <li className="text-xs sm:text-sm text-primary-foreground/70">Gestion immobilière</li>
             </ul>
           </div>
         </div>
@@ -92,7 +85,7 @@ export function Footer() {
               © {new Date().getFullYear()} NovaPros. Tous droits réservés.
             </p>
             <p className="text-xs sm:text-sm text-primary-foreground/60">
-              Services offerts au Québec
+              {siteConfig.address}
             </p>
           </div>
         </div>
