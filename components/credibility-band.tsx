@@ -11,16 +11,16 @@ const badges = [
 
 export function CredibilityBand() {
   return (
-    <section className="py-6 sm:py-8 bg-primary overflow-hidden">
+    <section className="py-4 sm:py-6 lg:py-8 bg-primary">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex overflow-x-auto sm:overflow-visible sm:flex-wrap justify-start sm:justify-center gap-3 sm:gap-4 lg:gap-6 pb-2 sm:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 lg:gap-4">
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-primary-foreground/10 rounded-full flex-shrink-0"
+              className="flex items-center justify-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-2 sm:py-2.5 bg-primary-foreground/10 rounded-lg sm:rounded-full"
             >
-              <badge.icon className="h-4 w-4 text-primary-foreground flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium text-primary-foreground whitespace-nowrap">
+              <badge.icon className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-primary-foreground flex-shrink-0" />
+              <span className="text-[10px] sm:text-xs lg:text-sm font-medium text-primary-foreground text-center leading-tight">
                 {badge.label}
               </span>
             </div>

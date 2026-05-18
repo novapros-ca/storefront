@@ -108,57 +108,57 @@ export function ContactSection() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Nom *</Label>
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="space-y-1.5 sm:space-y-2">
+                      <Label htmlFor="name" className="text-xs sm:text-sm">Nom *</Label>
                       <Input
                         id="name"
                         name="name"
                         required
                         placeholder="Votre nom"
-                        className="bg-background"
+                        className="bg-background h-9 sm:h-10 text-sm"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="company">Entreprise</Label>
+                    <div className="space-y-1.5 sm:space-y-2">
+                      <Label htmlFor="company" className="text-xs sm:text-sm">Entreprise</Label>
                       <Input
                         id="company"
                         name="company"
                         placeholder="Nom de votre entreprise"
-                        className="bg-background"
+                        className="bg-background h-9 sm:h-10 text-sm"
                       />
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Courriel *</Label>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                    <div className="space-y-1.5 sm:space-y-2">
+                      <Label htmlFor="email" className="text-xs sm:text-sm">Courriel *</Label>
                       <Input
                         id="email"
                         name="email"
                         type="email"
                         required
                         placeholder="votre@courriel.com"
-                        className="bg-background"
+                        className="bg-background h-9 sm:h-10 text-sm"
                       />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Téléphone</Label>
+                    <div className="space-y-1.5 sm:space-y-2">
+                      <Label htmlFor="phone" className="text-xs sm:text-sm">Téléphone</Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
                         placeholder="(XXX) XXX-XXXX"
-                        className="bg-background"
+                        className="bg-background h-9 sm:h-10 text-sm"
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="need-type">Type de besoin *</Label>
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <Label htmlFor="need-type" className="text-xs sm:text-sm">Type de besoin *</Label>
                     <Select name="need-type" required>
-                      <SelectTrigger className="bg-background">
+                      <SelectTrigger className="bg-background h-9 sm:h-10 text-sm">
                         <SelectValue placeholder="Sélectionnez un type de besoin" />
                       </SelectTrigger>
                       <SelectContent>
@@ -171,36 +171,36 @@ export function ContactSection() {
                     </Select>
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <Label htmlFor="message" className="text-xs sm:text-sm">Message *</Label>
                     <Textarea
                       id="message"
                       name="message"
                       required
-                      placeholder="Décrivez vos besoins ou posez vos questions..."
-                      rows={5}
-                      className="bg-background resize-none"
+                      placeholder="Décrivez vos besoins..."
+                      rows={4}
+                      className="bg-background resize-none text-sm"
                     />
                   </div>
 
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                    <p className="text-xs text-muted-foreground">
-                      Votre demande sera analysée afin de vous orienter vers le bon type d&apos;accompagnement.
-                    </p>
+                  <div className="flex flex-col gap-3 sm:gap-4">
                     <Button
                       type="submit"
                       disabled={isLoading}
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full sm:w-auto"
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground w-full h-10 sm:h-11 text-sm"
                     >
                       {isLoading ? (
-                        "Envoi en cours..."
+                        "Envoi..."
                       ) : (
                         <>
-                          Envoyer ma demande
+                          Envoyer
                           <Send className="ml-2 h-4 w-4" />
                         </>
                       )}
                     </Button>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground text-center">
+                      Votre demande sera analysée pour vous orienter vers le bon accompagnement.
+                    </p>
                   </div>
                 </form>
               )}
