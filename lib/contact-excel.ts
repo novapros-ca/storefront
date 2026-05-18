@@ -20,9 +20,9 @@ type GraphConfigResult =
 
 function getGraphConfig(): GraphConfigResult {
   const envMap = {
-    GRAPH_TENANT_ID: process.env.GRAPH_TENANT_ID,
-    GRAPH_CLIENT_ID: process.env.GRAPH_CLIENT_ID,
-    GRAPH_CLIENT_SECRET: process.env.GRAPH_CLIENT_SECRET,
+    GRAPH_TENANT_ID: process.env.GRAPH_TENANT_ID ?? process.env.TENANT_ID,
+    GRAPH_CLIENT_ID: process.env.GRAPH_CLIENT_ID ?? process.env.CLIENT_ID,
+    GRAPH_CLIENT_SECRET: process.env.GRAPH_CLIENT_SECRET ?? process.env.CLIENT_SECRET,
     EXCEL_DRIVE_ID: process.env.EXCEL_DRIVE_ID,
     EXCEL_ITEM_ID: process.env.EXCEL_ITEM_ID,
     EXCEL_SHEET_NAME: process.env.EXCEL_SHEET_NAME,
