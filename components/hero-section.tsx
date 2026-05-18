@@ -39,9 +39,63 @@ export function HeroSection() {
             </p>
           </div>
 
-          {/* Right Visual - Abstract Dashboard/Cards Composition */}
-          <div className="relative hidden lg:block">
-            <div className="relative w-full h-[500px]">
+          {/* Right Visual - Mobile: Simple grid, Desktop: Absolute positioned */}
+          <div className="relative mt-8 lg:mt-0">
+            {/* Mobile Layout - Simple 2x2 grid */}
+            <div className="grid grid-cols-2 gap-3 lg:hidden">
+              <div className="bg-card rounded-xl shadow-sm border border-border p-4 space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-medium text-muted-foreground">Suivi financier</span>
+                  <BarChart3 className="h-4 w-4 text-accent" />
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-foreground">Transactions</span>
+                  <span className="text-xs font-semibold text-foreground">147</span>
+                </div>
+                <div className="w-full bg-secondary rounded-full h-1.5">
+                  <div className="bg-accent h-1.5 rounded-full" style={{ width: "78%" }}></div>
+                </div>
+              </div>
+
+              <div className="bg-card rounded-xl shadow-sm border border-border p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <FileText className="h-4 w-4 text-primary" />
+                  </div>
+                  <p className="text-xs font-medium text-foreground">Documents</p>
+                </div>
+                <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
+                  <span>Organisés</span>
+                </div>
+              </div>
+
+              <div className="bg-card rounded-xl shadow-sm border border-border p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+                    <Calendar className="h-4 w-4 text-accent" />
+                  </div>
+                  <p className="text-xs font-medium text-foreground">Tâches</p>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <CheckCircle className="h-3 w-3 text-accent" />
+                  <span className="text-xs text-muted-foreground">3/4 complétées</span>
+                </div>
+              </div>
+
+              <div className="bg-card rounded-xl shadow-sm border border-border p-4">
+                <div className="flex items-center gap-2 mb-2">
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Users className="h-4 w-4 text-primary" />
+                  </div>
+                  <p className="text-xs font-medium text-foreground">Équipe</p>
+                </div>
+                <p className="text-xs text-muted-foreground">Dossiers structurés</p>
+              </div>
+            </div>
+
+            {/* Desktop Layout - Absolute positioned cards */}
+            <div className="hidden lg:block relative w-full h-[500px]">
               {/* Main Card */}
               <div className="absolute top-0 left-8 w-72 bg-card rounded-xl shadow-lg border border-border p-6 space-y-4">
                 <div className="flex items-center justify-between">

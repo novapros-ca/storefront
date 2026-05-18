@@ -23,33 +23,33 @@ const features = [
 
 export function RealEstateSection() {
   return (
-    <section className="py-16 lg:py-24 bg-primary text-primary-foreground" id="immobilier">
+    <section className="py-12 sm:py-16 lg:py-24 bg-primary text-primary-foreground" id="immobilier">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Left Content */}
-          <div className="space-y-6">
+          <div className="space-y-5 sm:space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-foreground/10 rounded-full">
               <Building className="h-4 w-4" />
               <span className="text-sm font-medium">Propriétaires immobiliers</span>
             </div>
             
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-balance">
+            <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold leading-tight text-balance">
               Un soutien adapté aux propriétaires immobiliers
             </h2>
             
-            <p className="text-lg text-primary-foreground/80 leading-relaxed">
+            <p className="text-base sm:text-lg text-primary-foreground/80 leading-relaxed">
               Gérer un immeuble ou un parc immobilier demande de suivre les loyers, les dépenses, les fournisseurs, les documents et les communications. NovaPros vous aide à mieux organiser ces suivis pour garder une vue plus claire sur votre gestion.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="h-5 w-5 text-primary-foreground" />
+                <div key={index} className="flex items-start gap-3 sm:gap-4">
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-primary-foreground mb-1">{feature.title}</h3>
-                    <p className="text-sm text-primary-foreground/70">{feature.description}</p>
+                  <div className="min-w-0">
+                    <h3 className="font-semibold text-primary-foreground text-sm sm:text-base mb-0.5 sm:mb-1">{feature.title}</h3>
+                    <p className="text-xs sm:text-sm text-primary-foreground/70">{feature.description}</p>
                   </div>
                 </div>
               ))}

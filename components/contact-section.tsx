@@ -32,61 +32,61 @@ export function ContactSection() {
   }
 
   return (
-    <section className="py-16 lg:py-24 bg-background" id="contact">
+    <section className="py-12 sm:py-16 lg:py-24 bg-background" id="contact">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12 lg:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-foreground mb-3 sm:mb-4 text-balance">
             Parlons de vos besoins
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground leading-relaxed">
             Vous souhaitez structurer votre gestion, déléguer certaines tâches ou clarifier vos suivis? Écrivez-nous et nous vous répondrons pour voir comment NovaPros peut vous accompagner.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-6 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8 order-2 lg:order-1">
             <div>
-              <h3 className="text-lg font-semibold text-foreground mb-6">Coordonnées</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+              <h3 className="text-lg font-semibold text-foreground mb-4 lg:mb-6">Coordonnées</h3>
+              <div className="space-y-3 sm:space-y-4">
+                <a href="mailto:info@novapros.ca" className="flex items-center gap-3 sm:gap-4 group">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Courriel</p>
-                    <a href="mailto:info@novapros.ca" className="text-foreground hover:text-accent transition-colors">
+                  <div className="min-w-0">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Courriel</p>
+                    <span className="text-sm sm:text-base text-foreground group-hover:text-accent transition-colors truncate block">
                       info@novapros.ca
-                    </a>
+                    </span>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <a href="tel:+14185551234" className="flex items-center gap-3 sm:gap-4 group">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Téléphone</p>
-                    <a href="tel:+14185551234" className="text-foreground hover:text-accent transition-colors">
+                    <p className="text-xs sm:text-sm text-muted-foreground">Téléphone</p>
+                    <span className="text-sm sm:text-base text-foreground group-hover:text-accent transition-colors">
                       (418) 555-1234
-                    </a>
+                    </span>
                   </div>
-                </div>
+                </a>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Région</p>
-                    <p className="text-foreground">Québec</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Région</p>
+                    <p className="text-sm sm:text-base text-foreground">Québec</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="p-4 bg-secondary/50 rounded-lg">
-              <p className="text-sm text-muted-foreground">
+            <div className="p-3 sm:p-4 bg-secondary/50 rounded-lg">
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 <strong className="text-foreground">Services offerts au Québec</strong>
                 <br />
                 Accompagnement à distance et en personne selon vos besoins.
@@ -95,8 +95,8 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <Card className="lg:col-span-2 bg-card border-border">
-            <CardContent className="p-6 lg:p-8">
+          <Card className="lg:col-span-2 bg-card border-border order-1 lg:order-2">
+            <CardContent className="p-4 sm:p-6 lg:p-8">
               {isSubmitted ? (
                 <div className="text-center py-12 space-y-4">
                   <div className="w-16 h-16 rounded-full bg-accent/10 flex items-center justify-center mx-auto">

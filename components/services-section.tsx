@@ -52,26 +52,26 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-16 lg:py-24 bg-secondary/30" id="services">
+    <section className="py-12 sm:py-16 lg:py-24 bg-secondary/30" id="services">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+        <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
             Un soutien concret pour structurer votre gestion
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             NovaPros vous accompagne dans les tâches essentielles qui soutiennent la santé administrative, financière et opérationnelle de votre organisation.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12">
           {services.map((service, index) => (
             <Card key={index} className="bg-card border-border flex flex-col h-full">
-              <CardHeader className="pb-4">
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <service.icon className="h-7 w-7 text-accent" />
+              <CardHeader className="pb-3 sm:pb-4">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-3 sm:mb-4">
+                  <service.icon className="h-6 w-6 sm:h-7 sm:w-7 text-accent" />
                 </div>
-                <CardTitle className="text-xl font-semibold text-foreground">{service.title}</CardTitle>
-                <CardDescription className="text-muted-foreground leading-relaxed">
+                <CardTitle className="text-lg sm:text-xl font-semibold text-foreground">{service.title}</CardTitle>
+                <CardDescription className="text-sm text-muted-foreground leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>

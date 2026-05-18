@@ -33,40 +33,40 @@ const problems = [
 
 export function ProblemsSection() {
   return (
-    <section className="py-16 lg:py-24 bg-background" id="problemes">
+    <section className="py-12 sm:py-16 lg:py-24 bg-background" id="problemes">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
+        <div className="text-center max-w-3xl mx-auto mb-10 lg:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-foreground mb-4 text-balance">
             Vous manquez de temps pour gérer l&apos;administration, les suivis et les chiffres?
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
             Quand une entreprise grandit, la gestion quotidienne devient vite plus lourde : livres à jour, fournisseurs, dossiers employés, documents, courriels et suivis internes. NovaPros vous aide à remettre de l&apos;ordre dans ces éléments essentiels.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           {problems.slice(0, 3).map((problem, index) => (
             <Card key={index} className="bg-card border-border hover:shadow-md transition-shadow">
-              <CardContent className="p-6 space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <problem.icon className="h-6 w-6 text-primary" />
+              <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <problem.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">{problem.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
+                <h3 className="text-base sm:text-lg font-semibold text-foreground">{problem.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{problem.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto mb-8 sm:mb-12">
           {problems.slice(3).map((problem, index) => (
             <Card key={index} className="bg-card border-border hover:shadow-md transition-shadow">
-              <CardContent className="p-6 space-y-4">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <problem.icon className="h-6 w-6 text-primary" />
+              <CardContent className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <problem.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary" />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground">{problem.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{problem.description}</p>
+                <h3 className="text-base sm:text-lg font-semibold text-foreground">{problem.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{problem.description}</p>
               </CardContent>
             </Card>
           ))}
