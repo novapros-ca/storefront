@@ -72,7 +72,7 @@ export function TrustSection() {
           <p className="text-sm sm:text-base font-semibold text-foreground text-center">
             Certifications et affiliations
           </p>
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5">
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             <div className="flex flex-col items-center justify-center rounded-xl border border-border/70 bg-background p-4 min-h-36">
               <Image
                 src="/certifications/frederik-lavoie.jpg"
@@ -106,9 +106,18 @@ export function TrustSection() {
                 className="h-auto max-h-20 sm:max-h-24 w-auto object-contain"
               />
             </div>
+            <div className="flex items-center justify-center rounded-xl border border-border/70 bg-background p-4 min-h-36">
+              <Image
+                src="/certifications/apchq-membre.svg"
+                alt="Logo APCHQ membre"
+                width={220}
+                height={110}
+                className="h-auto max-h-16 sm:max-h-20 w-auto object-contain"
+              />
+            </div>
           </div>
           <p className="mt-4 text-[11px] sm:text-xs text-muted-foreground text-center leading-relaxed">
-            Partenaire certifié QuickBooks (niveau Elite). Les marques appartiennent à leurs propriétaires respectifs.
+            Membre APCHQ | Partenaire certifié QuickBooks (niveau Elite) | Licence RBQ : 5876-2568-01. Les marques appartiennent à leurs propriétaires respectifs.
           </p>
         </div>
 

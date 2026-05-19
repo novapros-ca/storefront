@@ -83,6 +83,8 @@ export function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <p className="text-xs sm:text-sm text-primary-foreground/60 text-center sm:text-left">
               © {new Date().getFullYear()} NovaPros. Tous droits réservés.
+              <br />
+              Licence RBQ : 5876-2568-01
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm text-primary-foreground/60">
               <Link
