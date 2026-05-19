@@ -84,9 +84,15 @@ export function Footer() {
             <p className="text-xs sm:text-sm text-primary-foreground/60 text-center sm:text-left">
               © {new Date().getFullYear()} NovaPros. Tous droits réservés.
             </p>
-            <p className="text-xs sm:text-sm text-primary-foreground/60">
-              {siteConfig.address}
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-xs sm:text-sm text-primary-foreground/60">
+              <Link
+                href="/politique-confidentialite"
+                className="hover:text-primary-foreground transition-colors underline underline-offset-2"
+              >
+                Politique de confidentialité
+              </Link>
+              <p>{siteConfig.address}</p>
+            </div>
           </div>
         </div>
       </div>
