@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -243,8 +244,12 @@ export function ContactSection() {
                         </>
                       )}
                     </Button>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground text-center">
-                      Votre demande sera analysée pour vous orienter vers le bon accompagnement.
+                    <p className="text-[10px] sm:text-xs text-muted-foreground text-center leading-relaxed">
+                      En envoyant ce formulaire, vous consentez au traitement de vos renseignements personnels conformement a notre{" "}
+                      <Link href="/politique-confidentialite" className="underline underline-offset-2 hover:text-foreground transition-colors">
+                        politique de confidentialite
+                      </Link>
+                      .
                     </p>
                   </div>
                 </form>
