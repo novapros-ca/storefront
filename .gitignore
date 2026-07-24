@@ -14,5 +14,8 @@ node_modules
 .next/
 .DS_Store
 
+# Auto-généré par Next (bascule entre chemins dev/build) — ne pas suivre
+next-env.d.ts
+
 # Fichiers sources originaux des certifications (les images servies sont dans public/certifications)
 /certifications/
