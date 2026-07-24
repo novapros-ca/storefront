@@ -16,6 +16,7 @@ export const navItems = [
 ]
 
 export const contactNeedTypes = [
+  { label: "Comptabilité", value: "comptabilite" },
   { label: "Tenue de livres", value: "tenue-de-livres" },
   { label: "Soutien RH administratif", value: "soutien-rh-administratif" },
   { label: "Soutien opérationnel", value: "soutien-operationnel" },
