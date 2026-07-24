@@ -65,7 +65,7 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <Link href="#contact">Planifier une discussion</Link>
+              <Link href="/#contact">Planifier une discussion</Link>
             </Button>
           </div>
 
@@ -97,7 +97,7 @@ export function Header() {
                   ))}
                 </nav>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground w-full mt-4">
-                  <Link href="#contact" onClick={() => setIsOpen(false)}>
+                  <Link href="/#contact" onClick={() => setIsOpen(false)}>
                     Planifier une discussion
                   </Link>
                 </Button>

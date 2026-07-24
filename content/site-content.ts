@@ -7,12 +7,15 @@ export const siteConfig = {
   hoursWeekend: "Samedi et dimanche: fermé",
 }
 
+// Ancres root-relative (/#...) pour que la navigation fonctionne aussi depuis
+// les sous-pages (ex. /politique-confidentialite) : on revient à l'accueil puis
+// on défile vers la section, plutôt que de rester coincé sur la page courante.
 export const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Propriétaires immobiliers", href: "#examples" },
-  { label: "Approche", href: "#approche" },
-  { label: "Carrières", href: "#carrieres" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Propriétaires immobiliers", href: "/#examples" },
+  { label: "Approche", href: "/#approche" },
+  { label: "Carrières", href: "/#carrieres" },
+  { label: "Contact", href: "/#contact" },
 ]
 
 export const contactNeedTypes = [
