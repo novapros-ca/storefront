@@ -13,3 +13,6 @@ __v0_jsx-dev-runtime.ts
 node_modules
 .next/
 .DS_Store
+
+# Fichiers sources originaux des certifications (les images servies sont dans public/certifications)
+/certifications/
